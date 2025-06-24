@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey forms </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form >
+    <fieldset>
+        <h1> User personal information </h1>
+        <label for="name"> Enter your full name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Enter your password: </label>
+        <input type="password" id="password" required>
+        <br>
+        <label for="confirmpassword">Confirn your password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <label id="phone">Enter your phone no:</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" required>
+        <br>
+        <label for="country">Select your country:</label>
+        <select id="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+        </select>
+        <br>
+        <label> Enter your gender:</label>
+        <div class="gender-group">
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female" id="Female">
+            <label for="male">Female</label>
+            <input type="radio" name="gender" value="others" id="others">
+            <label for="male">others</label>
+        </div>
+        <br>
+        <label for="dob"> Enter date of birth:</label>
+        <input type="date" id="dob" required>
+        <br>
+        <label for="address"> Enter your address :</label>
+        <input type="text" id="address" required />
+        <br>
+         <label id="Submit"></label>
+        <input type="Submit" value="Submit">
+    </fieldset>
+    </form>
+</body>
+</html>
