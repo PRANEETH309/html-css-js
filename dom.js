@@ -1,0 +1,14 @@
+document.title="DOM in Javascript";
+document.body.style.backgroundColor="skyblue";
+document.getElementById("header").innerHTML="hello world!";
+document.getElementById("para1").innerHTML="Welcome to DOM manipulation";
+document.getElementById("para1").style.color="green";
+document.getElementById("para1").style.fontSize="30px";
+document.getElementsByTagName("h1")[1].style.color="red";
+document.getElementsByTagName("h2")[0].style.color="yellow";
+document.getElementById("para4").style.color="blue";
+document.getElementsByClassName("ds")[0].style.color="orange";
+document.getElementsByClassName("ds")[1].style.color="white";
+document.getElementsByClassName("ds")[2].style.color="violet";
+document.getElementsByClassName("ds")[0].style.fontSize="30px";
+document.getElementsByClassName("ds")[1].style.fontSize="25px";
