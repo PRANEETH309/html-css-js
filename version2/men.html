@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEN</title>
+</head>
+<body>
+    <h2>SHIRTS</h2>
+    <div style="display: flex;">
+        <div>
+            <img style="width: 150px;height: 300px;"src="shirt1.jpeg" alt="shirt1"><br>
+            <h6><p>PRICE:1000/-</p></h6>
+            <button onclick="addToCart('Shirt 1', 1000,'shirt1.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img style="width: 150px;height: 300px;" src="shirt2.jpeg" alt="shirt1"><br>
+            <h6><p>PRICE:2000/-</p></h6>
+            <button onclick="addToCart('Shirt 2', 2000,'shirt2.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img style="width: 150px;height: 300px;" src="shirt3.avif" alt="shirt1"><br>
+            <h6><p>PRICE:1500/-</p></h6>
+            <button onclick="addToCart('Shirt 3', 1500,'shirt3.avif')">Add to Cart</button>
+        </div>
+    </div>
+    <h2>PANTS</h2>
+    <div style="display: flex;">
+        <div>
+            <img src="pant1.jpeg" style="width: 150px;height: 300px;" alt="pant1"><br>
+            <h6><p>PRICE:1700/-</p></h6>
+            <button onclick="addToCart('pant 1', 1700,'pant1.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="pant2.jpeg" style="width: 150px;height: 300px;" alt="pant2"><br>
+            <h6><p>PRICE:1800/-</p></h6>
+            <button onclick="addToCart('pant 2', 1800,'pant2.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="pant3.jpeg" style="width: 150px;height: 300px;" alt="pant3"><br>
+            <h6><p>PRICE:2200/-</p></h6>
+            <button onclick="addToCart('pant 3', 2200,'pant3.jpeg')">Add to Cart</button>
+        </div>
+    </div>
+    <h2>T-SHIRTS</h2>
+    <div style="display: flex;">
+        <div>
+            <img src="tshirt1.jpeg" style="width: 150px;height: 300px;" alt="tshirt1"><br>
+            <h6><p>PRICE:1200/-</p></h6>
+            <button onclick="addToCart('tshirt 1', 1200,'tshirt1.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="tshirt2.jpeg" style="width: 150px;height: 300px;" alt="tshirt2"><br>
+            <h6><p>PRICE:1400/-</p></h6>
+            <button onclick="addToCart('tshirt 2', 1400,'tshirt2.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="tshirt3.jpeg" style="width: 150px;height: 300px;" alt="tshirt3"><br>
+            <h6><p>PRICE:1000/-</p></h6>
+            <button onclick="addToCart('tshirt 3', 1000,'tshirt1.jpeg')">Add to Cart</button>
+        </div>
+    </div>
+     <h2>SHORTS</h2>
+    <div style="display: flex;">
+        <div>
+            <img src="short1.jpeg" style="width: 150px;height: 300px;" alt="short1"><br>
+            <h6><p>PRICE:600/-</p></h6>
+            <button onclick="addToCart('short 1', 600,'short1.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="short2.jpeg" style="width: 150px;height: 300px;" alt="short2"><br>
+            <h6><p>PRICE:800/-</p></h6>
+            <button onclick="addToCart('Short 2', 800,'short2.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="short3.jpeg" style="width: 150px;height: 300px;" alt="short3"><br>
+            <h6><p>PRICE:1000/-</p></h6>
+            <button onclick="addToCart('Short 3', 1000,'shirt3.jpeg')">Add to Cart</button>
+        </div>
+    </div><br>
+    <h2>TROUSERS</h2>
+    <div style="display: flex;">
+        <div>
+            <img src="trouser1.jpeg" style="width: 150px;height: 300px;" alt="trouser1"><br>
+            <h6><p>PRICE:2000/-</p></h6>
+            <button onclick="addToCart('Trouser 1', 2000,'trouser1.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="trouser2.jpeg" style="width: 150px;height: 300px;" alt="trouser2"><br>
+            <h6><p>PRICE:1900/-</p></h6>
+            <button onclick="addToCart('Trouser 2', 1900,'trouser2.jpeg')">Add to Cart</button>
+        </div>
+        <div>
+            <img src="trouser3.jpeg" style="width: 150px;height: 300px;" alt="trouser3"><br>
+            <h6><p>PRICE:1800/-</p></h6>
+            <button onclick="addToCart('Trouser 3', 1800,'trouser3.jpeg')">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+  function addToCart(name, price, image) {
+    let cart = localStorage.getItem("cart");
+    cart = cart ? JSON.parse(cart) : [];
+
+    cart.push({ name: name, price: price, image: image });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+    </script>
+
+</body>
+</html>
