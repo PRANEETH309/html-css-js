@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHECKOUT PAGE</title>
+</head>
+<body>
+  <h1>CHECKOUT PAGE</h1>
+  <h3>Add Address:</h3>
+
+  <form id="checkoutForm" onsubmit="validateForm(event)">
+    <label for="name">NAME:</label>
+    <input type="text" id="name" placeholder="Enter your name" required><br>
+
+    <label for="phoneNo">PHONE NO:</label>
+    <input type="tel" id="phoneNo" placeholder="Enter phone no" required><br>
+
+    <label for="altPhoneNo">ALTERNATIVE PHONE NO:</label>
+    <input type="tel" id="altPhoneNo" placeholder="Enter alt phone no" required><br>
+
+    <label for="houseno">HOUSE NO*:</label>
+    <input type="text" id="houseno" placeholder="Enter HouseNo/FlatNo" required><br>
+
+    <label for="street">STREET*:</label>
+    <input type="text" id="street" placeholder="Enter Street name" required><br>
+
+    <label for="landmark">NEAREST LANDMARK*:</label>
+    <input type="text" id="landmark" placeholder="Enter nearest landmark" required><br>
+
+    <label for="district">DISTRICT*:</label>
+    <input type="text" id="district" placeholder="Enter District" required><br>
+
+    <label for="state">STATE*:</label>
+    <input type="text" id="state" placeholder="Enter State" required><br>
+
+    <label for="pincode">PINCODE*:</label>
+    <input type="number" id="pincode" placeholder="Enter Pincode" required><br><br>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+
+      const fields = [
+        "name",
+        "phoneNo",
+        "altPhoneNo",
+        "houseno",
+        "street",
+        "landmark",
+        "district",
+        "state",
+        "pincode"
+      ];
+
+      let allFilled = true;
+      for (let id of fields) {
+        const value = document.getElementById(id).value.trim();
+        if (value === "") {
+          allFilled = false;
+          break;
+        }
+      }
+      if (!allFilled) {
+        alert("Please fill all the fields!");
+      } else {
+        window.location.href = "order.html";
+      }
+    }
+  </script>
+</body>
+</html>
