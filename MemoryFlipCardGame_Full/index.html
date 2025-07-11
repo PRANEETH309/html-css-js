@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Flip Card Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Memory Flip Card Game</h1>
+    <div id="game-board" class="board"></div>
+    <div id="result" class="hidden">
+      <p>Moves: <span id="moves"></span></p>
+      <p>Time: <span id="time"></span>s</p>
+      <p>Rating: <span id="rating"></span></p>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
