@@ -1,12 +1,50 @@
-<!DOCTYPE html>
+
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div>
+         <h1>Hello...!</h1>
+    <h1>This is home page of my project</h1>
+    <p>It contains the overview of my project</p>
+    <a style="color: antiquewhite;" href="/about/">Go to About Page</a>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME PAGE</title>
+    <link rel="stylesheet" href="{%static 'styles/index.css'%}">
+    <script src="{%static 'script/main.js' %}" defer></script>
 </head>
 <body>
+    <h1>Hello...!</h1>
     <h1>This is home page of my project</h1>
     <p>It contains the overview of my project</p>
+    <a href="/about/">Go to About Page</a>
 </body>
-</html>
+</html> -->
+
+
